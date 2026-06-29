@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    public TextMeshProUGUI tmp;
     public static int score;
-    public int damage = 10;
+    public TextMeshProUGUI tmp;
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,11 +16,11 @@ public class GameSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        tmp.text = score.ToString();
     }
 
-    public void ScoreUp()
+    public void ScoreDown(int minus)
     {
-        score -= damage;
+        score -= minus;
     }
 }

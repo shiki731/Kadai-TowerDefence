@@ -5,6 +5,7 @@ public class EnemyMove : MonoBehaviour
 {
     private float speed = 2.0f;
     public GameSystem system;
+    public int damage = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +22,7 @@ public class EnemyMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            system.ScoreUp();
+            system.ScoreDown(damage);
             Destroy(gameObject);
         }
     }
