@@ -3,22 +3,26 @@ using UnityEngine;
 
 public class EnemySporn : MonoBehaviour
 {
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject[] enemy;
+    private bool spawnCheck;
     void Start()
     {
-        StartCoroutine(Spowm());
+        spawnCheck = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (spawnCheck)
+        {
+            StartCoroutine(Spowm());
+        }
     }
 
     IEnumerator Spowm()
     {
+        spawnCheck = false;
         yield return new WaitForSeconds(1);
         Debug.Log("aaaa");
+        spawnCheck = true;
     }
 }

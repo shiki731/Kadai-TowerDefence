@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    public static int score;
+    public static int score = 0;
     public TextMeshProUGUI tmp;
     
     
