@@ -22,7 +22,7 @@ public class EnemySporn : MonoBehaviour
     {
         spawnCheck = false;
         yield return new WaitForSeconds(1);
-        Debug.Log("aaaa");
+        //Debug.Log("aaaa");
         spawnCheck = true;
     }
 }
